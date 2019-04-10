@@ -59,6 +59,7 @@ func SocketConfig(socket *gowebsocket.Socket) {
 		received := Message{}
 		err := json.Unmarshal([]byte(message), &received)
 		check(err)
+		log.Println("hooolaaa", received)
 		if received.Type == "driver" {
 			// angle := received.Content["variables"][0]
 			outA.Command("run-forever")
