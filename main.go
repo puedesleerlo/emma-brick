@@ -18,7 +18,7 @@ type Message struct {
     Sender    string `json:"sender,omitempty"`
     Recipient string `json:"recipient,omitempty"`
     Type     string `json:"type,omitempty"`
-    Content   map[string]map[int]interface{} `json:"content,omitempty"`
+    Content   map[string]interface{} `json:"content,omitempty"`
 }
 
 var outA, _ = ev3dev.TachoMotorFor("ev3-ports:outA", "lego-ev3-m-motor")
